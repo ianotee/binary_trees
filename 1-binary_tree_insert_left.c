@@ -16,7 +16,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	if (!parent)
 		return (NULL);
 	/*This is the malloc function that gives enough space.*/
-	Todo = malloc(sizeof(binary_tree_t));
+	par = malloc(sizeof(binary_tree_t));
 	if (!par)
 		return (NULL);
 	/*This is the Todo logic*/
