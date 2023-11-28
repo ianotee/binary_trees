@@ -9,14 +9,12 @@
  */
 
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
-{
-	binary_tree_t *new;
-    
+{   
 /*The below is an if statement*/
 	if (!parent)
 		return (NULL);
 /*This is the malloc function that gives enough space.*/
-  binary_tree_t *new = calloc(1, sizeof(binary_tree_t));
+    binary_tree_t *    new = calloc(1, sizeof(binary_tree_t));
   	if (!new)
 		return (NULL);
 /*This is the new logic*/
