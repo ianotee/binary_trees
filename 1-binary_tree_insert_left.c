@@ -10,24 +10,24 @@
 
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
-	binary_tree_t *par;
+	binary_tree_t *new;
     
 	/*The below is an if statement*/
 	if (!parent)
 		return (NULL);
 	/*This is the malloc function that gives enough space.*/
-	par = malloc(sizeof(binary_tree_t));
-	if (!par)
+	new = malloc(sizeof(binary_tree_t));
+	if (!new)
 		return (NULL);
 	/*This is the Todo logic*/
-	par->n = value;
-	par->parent = parent;
-	par->right = NULL;
-	par->left = parent->left;
-	parent->left = par;
+	new->n = value;
+	new->parent = parent;
+	new->right = NULL;
+	new->left = parent->left;
+	new->left = new;
 
 /*This is the  conditional statement */
-	if (par->left)
-		par->left->parent = par;
-	return (par);
+	if (new->left)
+		new->left->parent = new;
+	return (new);
 }
