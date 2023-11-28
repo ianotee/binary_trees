@@ -11,7 +11,13 @@
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
 	binary_tree_t *begin_node;
-         /*This is is the conditional statement*/
+
+	/*The pointers of the parent node*/
+	begin_node->left = NULL;
+	begin_node->right = NULL;
+	begin_node->n = value;
+
+        /*This is is the conditional statement*/
 	if (parent == NULL)
 		return (NULL);
         /*This is the malloc function for allocating memory.*/
@@ -31,10 +37,5 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 		begin_node->left->parent = begin_node;
 		begin_node->parent = parent;
 	}
-	/*The pointers of the parent node*/
-	begin_node->left = NULL;
-	begin_node->right = NULL;
-	begin_node->n = value;
-
 	return (begin_node);
 }
